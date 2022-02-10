@@ -16,7 +16,7 @@ public class ArticuloDao {
 	@Autowired
 	private JdbcTemplate template;
 	
-	public Articulo saveArticulo(Articulo articulo) {
+	public Articulo save(Articulo articulo) {
 		  String sqlQuery = "insert into articulos(nombre, precio) " +
 		                    "values (?, ?)";
 		  template.update(sqlQuery, 

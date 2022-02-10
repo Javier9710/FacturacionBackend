@@ -4,10 +4,10 @@ import gnosoft.springboot.app.vos.Articulo;
 
 public interface IArticuloService {
 	
-	public Articulo saveArticulo(Articulo articulo);
+	public Articulo save(Articulo articulo);
 	
 	
 	
-	public Articulo findArticuloId(Long id);
+	public Articulo findById(Long id);
 
 }

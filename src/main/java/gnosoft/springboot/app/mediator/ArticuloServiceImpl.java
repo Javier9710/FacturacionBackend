@@ -14,12 +14,12 @@ public class ArticuloServiceImpl implements IArticuloService{
 	private ArticuloDao articuloDao;
 
 	@Override
-	public Articulo saveArticulo(Articulo articulo) {
-		return articuloDao.saveArticulo(articulo);
+	public Articulo save(Articulo articulo) {
+		return articuloDao.save(articulo);
 	}
 
 	@Override
-	public Articulo findArticuloId(Long id) {
+	public Articulo findById(Long id) {
 		return articuloDao.findById(id);
 		
 	}

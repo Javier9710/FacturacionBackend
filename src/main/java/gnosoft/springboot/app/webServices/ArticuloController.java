@@ -22,7 +22,7 @@ public class ArticuloController {
 	
 	@RequestMapping(value ="/save", method = RequestMethod.POST)
 	public ResponseEntity<Articulo> saveArticulo(@RequestBody Articulo articulo){
-		articuloService.saveArticulo(articulo);
+		articuloService.save(articulo);
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(articulo);
 		
@@ -31,7 +31,7 @@ public class ArticuloController {
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Articulo> findArticuloId(@PathVariable Long id){
 		
-		Articulo articuloDB = articuloService.findArticuloId(id);
+		Articulo articuloDB = articuloService.findById(id);
 		
 		
 		return ResponseEntity.status(HttpStatus.OK).body(articuloDB);
