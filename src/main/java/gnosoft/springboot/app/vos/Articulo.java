@@ -8,9 +8,18 @@ public class Articulo {
 	
 	//---------------------------------------------
 	
+	public Articulo(Long id, String nombre, double precio) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.precio = precio;
+	}
+	
+	
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
