@@ -2,6 +2,7 @@ package gnosoft.springboot.app.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -28,14 +29,31 @@ public class ClienteDao {
 	
 	public Cliente findById(String cedula) {
 	    return template.queryForObject("SELECT * FROM clientes WHERE id_cliente = ?",
-	            new ArticuloRowMapper(), cedula);
+	            new ClienteRowMapper(), cedula);
+	}
+	
+	
+	
+	public List<Cliente> listAll() {
+	    return template.query("SELECT * FROM clientes",
+	            new ClienteRowMapper());
 	}
 
-	private static class ArticuloRowMapper implements RowMapper<Cliente> {
+	private static class ClienteRowMapper implements RowMapper<Cliente> {
         @Override
         public Cliente mapRow(ResultSet rs, int rowNum) throws SQLException {
             return new Cliente(rs.getString("id_cliente"), rs.getString("nombre"));
         }
     }
+	
+	public Cliente update(Cliente cliente) {
+
+		  String sqlQuery = "UPDATE clientes SET nombre=? " +
+		                    "WHERE id_cliente=?";
+		  template.update(sqlQuery, 
+		                      cliente.getNombre(),
+		  					  cliente.getCedula());
+		  return cliente;
+		}
 
 }

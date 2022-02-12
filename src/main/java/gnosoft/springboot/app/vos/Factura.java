@@ -1,15 +1,19 @@
 package gnosoft.springboot.app.vos;
 
+import java.util.Date;
+import java.util.List;
 
 public class Factura {
 	
 	
 	private Long id;
 	private Cliente cliente;
-	private String fecha;;
+	private Date fecha;
 	private double subTotal;
 	private double iva;
 	private double total;
+	
+	private List<DetalleFactura> detalles;
 	
 	//-----------------------------------------
 	
@@ -25,10 +29,10 @@ public class Factura {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
-	public String getFecha() {
+	public Date getFecha() {
 		return fecha;
 	}
-	public void setFecha(String fecha) {
+	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
 	public double getSubTotal() {
@@ -49,6 +53,16 @@ public class Factura {
 	public void setTotal(double total) {
 		this.total = total;
 	}
+	
+	
+	public List<DetalleFactura> getDetalles() {
+		return detalles;
+	}
+	public void setDetalles(List<DetalleFactura> detalles) {
+		this.detalles = detalles;
+	}
+	
+	
 	
 	
 

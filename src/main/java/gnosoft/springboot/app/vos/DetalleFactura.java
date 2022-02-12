@@ -5,7 +5,7 @@ public class DetalleFactura {
 	private Long id;
 	private Articulo articulo;
 	private int cantidad;
-	private double totol;
+	private double total;
 	private Factura factura;
 	
 	//-----------------------------------------------
@@ -29,11 +29,11 @@ public class DetalleFactura {
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
-	public double getTotol() {
-		return totol;
+	public double getTotal() {
+		return total;
 	}
-	public void setTotol(double totol) {
-		this.totol = totol;
+	public void setTotal(double total) {
+		this.total = total;
 	}
 	public Factura getFactura() {
 		return factura;
