@@ -8,5 +8,7 @@ public interface IFacturaService {
 	public Factura save(Factura factura, FacturaDto facturaData);
 	
 	public Factura setFactura(FacturaDto facturaData);
+	
+	public Factura findById(Long id);
 
 }

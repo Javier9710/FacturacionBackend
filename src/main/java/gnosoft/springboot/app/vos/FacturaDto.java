@@ -2,7 +2,8 @@ package gnosoft.springboot.app.vos;
 
 import java.util.List;
 
-public class FacturaDto {
+public class FacturaDto{
+	
 	
 	private Long id;
 	private String cedula;
@@ -12,6 +13,9 @@ public class FacturaDto {
     private Double subtotal;
     private Double iva;
     private Double total;
+    
+    //------------------------------------------------------------
+    
 	public Long getId() {
 		return id;
 	}

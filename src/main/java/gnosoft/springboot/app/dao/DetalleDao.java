@@ -21,7 +21,7 @@ public class DetalleDao {
                    detalle.getCantidad(),
                    detalle.getTotal(),
                    detalle.getArticulo().getId(),
-                   detalle.getFactura().getId());
+                   detalle.getFactura());
 		
 		return detalle;
 	}

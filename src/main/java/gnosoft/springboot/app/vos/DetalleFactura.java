@@ -6,7 +6,7 @@ public class DetalleFactura {
 	private Articulo articulo;
 	private int cantidad;
 	private double total;
-	private Factura factura;
+	private Long factura;
 	
 	//-----------------------------------------------
 	
@@ -35,10 +35,10 @@ public class DetalleFactura {
 	public void setTotal(double total) {
 		this.total = total;
 	}
-	public Factura getFactura() {
+	public Long getFactura() {
 		return factura;
 	}
-	public void setFactura(Factura factura) {
+	public void setFactura(Long factura) {
 		this.factura = factura;
 	}
 	

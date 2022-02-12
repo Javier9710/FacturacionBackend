@@ -1,5 +1,6 @@
 package gnosoft.springboot.app.vos;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -17,6 +18,23 @@ public class Factura {
 	
 	//-----------------------------------------
 	
+	
+	
+	public Factura() {
+        this.detalles = new ArrayList<DetalleFactura>();
+    }
+	
+	public Factura(long l, Cliente object, java.sql.Date date, double d, double e, double f, List<DetalleFactura> detalles2) {
+		super();
+		this.id = l;
+		this.cliente = object;
+		this.fecha = date;
+		this.subTotal = d;
+		this.iva = e;
+		this.total = f;
+		this.detalles = detalles2;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -61,6 +79,10 @@ public class Factura {
 	public void setDetalles(List<DetalleFactura> detalles) {
 		this.detalles = detalles;
 	}
+	
+	public void agregarDetalle(DetalleFactura detalle) {
+        this.detalles.add(detalle);
+    }
 	
 	
 	
