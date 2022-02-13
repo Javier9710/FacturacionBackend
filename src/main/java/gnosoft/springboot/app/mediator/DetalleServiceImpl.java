@@ -1,5 +1,7 @@
 package gnosoft.springboot.app.mediator;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,11 @@ public class DetalleServiceImpl implements IDetalleService {
 	public void Delete(Long id) {
 		detalleDao.delete(id);
 		
+	}
+
+	@Override
+	public List<DetalleFactura> listDetallesFactura(Long id) {
+		return detalleDao.listDetallesFactura(id);
 	}
 
 }

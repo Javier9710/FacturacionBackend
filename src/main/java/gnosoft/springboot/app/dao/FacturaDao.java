@@ -52,9 +52,7 @@ public class FacturaDao {
 		factura.setId(id);
 		return factura;
 		
-	}
-	
-	
+	}	
 	public boolean delete(Long id) {
 		  String sqlQuery = "delete from facturas where id_factura = ?";
 		  template.update(sqlQuery, id);

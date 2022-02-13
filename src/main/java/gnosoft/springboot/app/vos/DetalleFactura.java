@@ -10,10 +10,24 @@ public class DetalleFactura {
 	
 	//-----------------------------------------------
 	
+	public DetalleFactura() {
+		
+	}
+	
+	
+	public DetalleFactura(Long id, Articulo articulo, int cantidad, double total, Long factura) {
+		super();
+		this.id = id;
+		this.articulo = articulo;
+		this.cantidad = cantidad;
+		this.total = total;
+		this.factura = factura;
+	}
 	
 	public Long getId() {
 		return id;
 	}
+	
 	public void setId(Long id) {
 		this.id = id;
 	}
