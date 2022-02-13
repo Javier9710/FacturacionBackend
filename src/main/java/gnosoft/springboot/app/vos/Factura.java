@@ -17,14 +17,12 @@ public class Factura {
 	private List<DetalleFactura> detalles;
 	
 	//-----------------------------------------
-	
-	
-	
+
 	public Factura() {
         this.detalles = new ArrayList<DetalleFactura>();
     }
 	
-	public Factura(long l, Cliente object, java.sql.Date date, double d, double e, double f, List<DetalleFactura> detalles2) {
+	public Factura(long l, Cliente object, java.sql.Date date, double d, double e, double f) {
 		super();
 		this.id = l;
 		this.cliente = object;
@@ -32,7 +30,7 @@ public class Factura {
 		this.subTotal = d;
 		this.iva = e;
 		this.total = f;
-		this.detalles = detalles2;
+
 	}
 
 	public Long getId() {

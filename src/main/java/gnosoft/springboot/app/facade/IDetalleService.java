@@ -5,5 +5,8 @@ import gnosoft.springboot.app.vos.DetalleFactura;
 public interface IDetalleService {
 	
 	public DetalleFactura save(DetalleFactura detalle);
+	
+	
+	public void Delete(Long id);
 
 }

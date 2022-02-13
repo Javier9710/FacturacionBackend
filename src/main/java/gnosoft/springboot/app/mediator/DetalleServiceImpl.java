@@ -15,8 +15,13 @@ public class DetalleServiceImpl implements IDetalleService {
 	
 	@Override
 	public DetalleFactura save(DetalleFactura detalle) {
-		// TODO Auto-generated method stub
 		return detalleDao.save(detalle);
+	}
+
+	@Override
+	public void Delete(Long id) {
+		detalleDao.delete(id);
+		
 	}
 
 }

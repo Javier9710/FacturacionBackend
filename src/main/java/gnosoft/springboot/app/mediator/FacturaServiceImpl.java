@@ -1,5 +1,7 @@
 package gnosoft.springboot.app.mediator;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -64,8 +66,17 @@ public class FacturaServiceImpl implements IFacturaService {
 
 	@Override
 	public Factura findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return facturaDao.findById(id);
+	}
+
+	@Override
+	public List<Factura> listAll() {
+		return facturaDao.listAll();
+	}
+
+	@Override
+	public boolean delete(Long id) {
+		return facturaDao.delete(id);
 	}
 
 }
