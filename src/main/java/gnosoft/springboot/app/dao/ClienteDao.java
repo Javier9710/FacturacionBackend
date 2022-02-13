@@ -33,7 +33,6 @@ public class ClienteDao {
 	}
 	
 	
-	
 	public List<Cliente> listAll() {
 	    return template.query("SELECT * FROM clientes",
 	            new ClienteRowMapper());

@@ -22,20 +22,9 @@ public class DetalleController {
 	@Autowired
 	private DetalleDao detalleDao;
 	
-	/*
-	@RequestMapping(value ="/save", method = RequestMethod.POST )
-	public ResponseEntity<DetalleFactura> save(@RequestBody DetalleFactura detalle){
-		detalleDao.save(detalle);
-		
-		return ResponseEntity.status(HttpStatus.CREATED).body(detalle);
-		
-	}*/
-	
 	@RequestMapping(value = "/factura/{id}", method = RequestMethod.GET)
 	public ResponseEntity<List<DetalleFactura>> listDetalleFactura(@PathVariable Long id){
-		
 		List<DetalleFactura> detallesDB = detalleDao.listDetallesFactura(id);
-		
 		return ResponseEntity.status(HttpStatus.OK).body(detallesDB);
 		
 	}

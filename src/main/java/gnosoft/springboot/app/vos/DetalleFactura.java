@@ -14,7 +14,6 @@ public class DetalleFactura {
 		
 	}
 	
-	
 	public DetalleFactura(Long id, Articulo articulo, int cantidad, double total, Long factura) {
 		super();
 		this.id = id;

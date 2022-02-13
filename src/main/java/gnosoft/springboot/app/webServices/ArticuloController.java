@@ -27,34 +27,25 @@ public class ArticuloController {
 	@RequestMapping(value ="/save", method = RequestMethod.POST)
 	public ResponseEntity<Articulo> saveArticulo(@RequestBody Articulo articulo){
 		articuloService.save(articulo);
-		
 		return ResponseEntity.status(HttpStatus.CREATED).body(articulo);
 		
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Articulo> findArticuloId(@PathVariable Long id){
-		
 		Articulo articuloDB = articuloService.findById(id);
-		
-		
 		return ResponseEntity.status(HttpStatus.OK).body(articuloDB);
 	}
 	
 	@RequestMapping(value = "/get", method = RequestMethod.GET)
 	public ResponseEntity<List<Articulo>> listAll(){
-		
-		List<Articulo> articulosDB = articuloService.listAll();
-		
-		
+		List<Articulo> articulosDB = articuloService.listAll();	
 		return ResponseEntity.status(HttpStatus.OK).body(articulosDB);
 	}
 	
 	@RequestMapping(value = "/up", method = RequestMethod.PUT)
 	public ResponseEntity<Articulo> update(@RequestBody Articulo articulo){
-
 		Articulo ArticuloUpdate = articuloService.update(articulo);
-		
 		return ResponseEntity.status(HttpStatus.OK).body(ArticuloUpdate);
 		
 	}

@@ -70,7 +70,6 @@ public class Factura {
 		this.total = total;
 	}
 	
-	
 	public List<DetalleFactura> getDetalles() {
 		return detalles;
 	}

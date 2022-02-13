@@ -8,10 +8,7 @@ public interface IArticuloService {
 	
 	public Articulo save(Articulo articulo);
 	
-	
-	
 	public Articulo findById(Long id);
-	
 	
 	public List<Articulo> listAll();
 	

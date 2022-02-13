@@ -32,7 +32,6 @@ public class ClienteController {
 	
 	@RequestMapping(value = "/{cedula}", method = RequestMethod.GET)
 	public ResponseEntity<Cliente> findById(@PathVariable String cedula){
-
 		Cliente clienteDB = clienteService.findById(cedula);
 		return ResponseEntity.status(HttpStatus.OK).body(clienteDB);
 		
@@ -48,9 +47,7 @@ public class ClienteController {
 	
 	@RequestMapping(value = "/up", method = RequestMethod.PUT)
 	public ResponseEntity<Cliente> update(@RequestBody Cliente cliente){
-		
 		Cliente clienteNew= clienteService.update(cliente);
-		
 		return ResponseEntity.status(HttpStatus.OK).body(clienteNew);
 		
 	}

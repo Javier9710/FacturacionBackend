@@ -27,16 +27,12 @@ public class FacturaController {
 	
 	@Autowired 
 	private IDetalleService detalleService;
-
 	
 	
 	@RequestMapping(value="/save", method = RequestMethod.POST)
 	public ResponseEntity<Factura> save(@RequestBody FacturaDto facturaData){
-		
 		Factura facturaSet = facturaService.setFactura(facturaData);
-		
 		Factura facturaResp = facturaService.save(facturaSet,facturaData);
-		
 		return ResponseEntity.status(HttpStatus.CREATED).body(facturaResp);
 		
 	}
